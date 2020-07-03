@@ -21,7 +21,8 @@ Open this file to add in the virtual host.
 sudo nano /etc/apache2/extra/httpd-vhosts.conf
 
 
-`VirtualHost *:80>
+```html
+<VirtualHost *:80>
     ServerName local.mysite.com
     ServerAlias local.mysite.com
     DocumentRoot "/Users/manojkumar/Sites/mysite.com"
@@ -31,7 +32,7 @@ sudo nano /etc/apache2/extra/httpd-vhosts.conf
         Require all granted
     </Directory>
 </VirtualHost>`
-
+```
 
 
 ## Map Your IP address to localhost
@@ -62,7 +63,8 @@ sudo nano /etc/apache2/extra/httpd-vhosts.conf
 
 Add in:
 
-`<VirtualHost *:80>
+```html
+<VirtualHost *:80>
 ServerName localhost
 DocumentRoot "/Users/manojkumar/Sites"
 <Directory "/Users/manojkumar/Sites">
@@ -71,10 +73,10 @@ DocumentRoot "/Users/manojkumar/Sites"
         Require all granted
     </Directory>
 </VirtualHost>`
-
+```
 
 Restart Apache
 
-<pre>
+```yaml
 sudo apachectl restart
-</pre>
+```
